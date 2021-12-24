@@ -42,38 +42,42 @@
     <div class="m-5 d-flex justify-content-center">
       <div class="w-50">
         <h1 class="registration-title mb-3">Registration Form</h1>
-        <div class="mb-3">
-          <label for="name" class="form-label">Name</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Enter your name"
-            id="name"
-          />
-          <div id="name" class="form-text">Please enter your full name.</div>
-        </div>
-        <div class="mb-3">
-          <label for="interests">Select your interests</label>
-          <select class="form-select" id="interests" multiple>
-            <option value="Frontend">Frontend</option>
-            <option value="Backend">Backend</option>
-          </select>
-          <div id="interests" class="form-text">Select multiple interests.</div>
-        </div>
-        <div class="mb-3">
-          <label for="dob" class="form-label">Date of Birth</label>
-          <input type="date" id="dob" class="form-control" />
-          <div id="dob" class="form-text">Select your date of birth.</div>
-        </div>
-        <div class="mb-3 form-check">
-          <label class="form-check-label" for="darkMode">Darkmode</label>
-          <input type="checkbox" class="form-check-input" id="darkMode" />
-          <div id="darkMode" class="form-text">Toggle dark and light mode.</div>
-        </div>
-        <div>
-          <button class="btn btn-primary" type="submit">Submit</button>
-        </div>
+        <form id="registration-form">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter your name"
+              id="name"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="interests">Select your interests</label>
+            <select class="form-select" id="interests" multiple required>
+              <option value="Frontend">Frontend</option>
+              <option value="Backend">Backend</option>
+            </select>
+            <div id="interests" class="form-text">
+              Select multiple interests.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="dob" class="form-label">Date of Birth</label>
+            <input type="date" id="dob" class="form-control" required />
+            <div id="dob" class="form-text">Select your date of birth.</div>
+          </div>
+          <div class="mb-3 form-check">
+            <label class="form-check-label" for="dark-mode">Darkmode</label>
+            <input type="checkbox" class="form-check-input" id="dark-mode" />
+          </div>
+          <div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
+        </form>
       </div>
     </div>
+    <script src="./registration.js"></script>
   </body>
 </html>
