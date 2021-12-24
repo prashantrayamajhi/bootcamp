@@ -17,3 +17,12 @@ function goTo(fileName) {
 if (!userInfo) {
   goTo("registration.html");
 }
+
+if (userInfo) {
+  const logout = document.getElementById("logout");
+  logout.innerHTML = '<p class="nav-link">Logout</p>';
+  logout.onclick = function () {
+    localStorage.removeItem("userInfo");
+    goTo("registration.html");
+  };
+}
