@@ -22,5 +22,5 @@ app.on("ready", () => {
 });
 
 app.on("window-all-closed", () => {
-  mainWindow === null;
+  app.quit();
 });
